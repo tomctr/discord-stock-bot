@@ -10,8 +10,6 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-const KEY_FINANCE = "5EC2LL04V7W1FLPI"
-
 func main() {
 	discord, err := discordgo.New("Bot " + "")
 
