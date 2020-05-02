@@ -13,7 +13,7 @@ import (
 const KEY_FINANCE = "5EC2LL04V7W1FLPI"
 
 func main() {
-	discord, err := discordgo.New("Bot " + "NzA2MTkyNTU3MzUyMjg4MzI4.Xq3ORA.ncdWfePSFDcrN2J_MCAXZxZ5glk")
+	discord, err := discordgo.New("Bot " + "")
 
 	if err != nil {
 		fmt.Println(err.Error())
@@ -49,7 +49,7 @@ func messageHandler(s *discordgo.Session, m *discordgo.MessageCreate) {
 	res := strings.Split(m.Content, " ")
 	if len(res) == 2 {
 		if res[0] == "stock" {
-			url := "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=" + res[1] + "&apikey=5EC2LL04V7W1FLPI"
+			url := "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=" + res[1] + "&apikey="
 			fmt.Println(url)
 			resp, err := http.Get(url)
 			if err != nil {
